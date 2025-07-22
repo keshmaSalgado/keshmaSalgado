@@ -25,9 +25,10 @@
   <a href="https://www.linkedin.com/in/keshma-salgado-6541932a8" target="blank">
     <img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" height="30" width="40" />
   </a>
-  <a href="https://github.com/keshmasalgado" target="blank">
-    <img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" height="30" width="40" />
-  </a>
+ <a href="https://github.com/keshmasalgado" target="blank">
+  <img align="center" src="https://skillicons.dev/icons?i=github" alt="GitHub" height="30" width="40" />
+</a>
+
   <a href="https://sketchfab.com/keshmasalgado11/models" target="blank">
     <img align="center" src="https://static.sketchfab.com/img/press/logos/sketchfab-logo-white.svg" alt="Sketchfab" height="30" />
   </a>
@@ -45,13 +46,11 @@
   <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" height="50" alt="Tailwind CSS" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" height="50" alt="Flutter" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="50" alt="Git" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="50" alt="GitHub" />
-  <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Vercel_logo_white.svg" height="50" alt="Vercel" />
+<img src="https://skillicons.dev/icons?i=github" height="50" alt="GitHub" />
+ <img src="https://skillicons.dev/icons?i=vercel" height="50" alt="Vercel" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height="50" alt="MongoDB" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" height="50" alt="Blender" />
-  <a href="https://threejs.org/" target="_blank" rel="noreferrer" title="Three.js">
-  <img src="https://raw.githubusercontent.com/mrdoob/three.js/dev/logo.svg" alt="Three.js" width="50" height="50" />
-</a>
+ <img src="https://skillicons.dev/icons?i=threejs" height="50" alt="Three.js" />
   <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" height="50" alt="Gmail" />
 </div>
 
