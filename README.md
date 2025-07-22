@@ -1,6 +1,6 @@
 <h1 align="center">Hey 👋 What's Up?</h1>
 
-<h3 align="center">A passionate Frontend and 3D Web Developer from Sri Lanka</h3>
+<h3 align="center">A passionate Frontend and 3D Web Developer</h3>
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=keshmasalgado&label=Profile%20views&color=0e75b6&style=flat" alt="keshmasalgado" />
@@ -31,8 +31,8 @@
   <a href="https://sketchfab.com/keshmasalgado11/models" target="_blank">
     <img align="center" src="https://static.sketchfab.com/img/press/logos/sketchfab-logo-white.svg" alt="Sketchfab" height="30" />
   </a>
-  <a href="mailto:your.email@example.com" target="_blank">
-    <img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gmail/gmail-original.svg" alt="Gmail" height="30" />
+  <a href="mailto:keshmasalgado11@gmail.com" target="_blank">
+     <img align="center" src="https://skillicons.dev/icons?i=gmail" alt="Gmail" height="30" />
   </a>
 </p>
 
