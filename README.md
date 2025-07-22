@@ -19,6 +19,7 @@
 ### 🔗 Connect with Me
 
 
+
 <p align="left">
   <a href="https://twitter.com/keshma_salgado" target="_blank">
     <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="Twitter" height="30" width="40" />
@@ -36,7 +37,6 @@
     <img align="center" src="https://skillicons.dev/icons?i=gmail" alt="Gmail" height="30" />
   </a>
 </p>
----
 
 ### 💻 Tech Stack
 
