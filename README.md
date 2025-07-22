@@ -48,19 +48,18 @@
   <a href="https://tailwindcss.com/" target="_blank"><img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" width="40" height="40" alt="TailwindCSS" /></a>
   <a href="https://flutter.dev/" target="_blank"><img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" width="40" height="40" alt="Flutter" /></a>
 </p>
-
 #### 🧠 3D, Animation & Motion
 <p align="left">
   <a href="https://threejs.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/threejs/threejs-original.svg" width="40" height="40" alt="Three.js" /></a>
-  <a href="https://www.blender.org/" target="_blank"><img src="https://download.blender.org/branding/community/blender_community_badge_white.svg" width="40" height="40" alt="Blender" /></a>
-  <a href="https://www.adobe.com/products/premiere.html" target="_blank"><img src="https://cdn.worldvectorlogo.com/logos/adobe-premiere-pro-cc.svg" width="40" height="40" alt="Premiere Pro" /></a>
-  <a href="https://webglfundamentals.org/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/2/22/WebGL_Logo.svg" width="40" height="40" alt="WebGL" /></a>
+  <a href="https://www.blender.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" width="40" height="40" alt="Blender" /></a>
+  <a href="https://www.adobe.com/products/premiere.html" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Adobe_Premiere_Pro_Logo.svg" width="40" height="40" alt="Adobe Premiere" /></a>
+  <a href="https://get.webgl.org/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/2/22/WebGL_Logo.svg" width="60" height="40" alt="WebGL" /></a>
 </p>
 
 #### 🔧 Tools & Platforms
 <p align="left">
   <a href="https://git-scm.com/" target="_blank"><img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" width="40" height="40" alt="Git" /></a>
-  <a href="https://github.com/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="40" height="40" alt="GitHub" /></a>
+  <a href="https://github.com/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" width="40" height="40" alt="GitHub" /></a>
   <a href="https://vercel.com/" target="_blank"><img src="https://www.svgrepo.com/show/327408/logo-vercel.svg" width="40" height="40" alt="Vercel" /></a>
 </p>
 
