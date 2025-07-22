@@ -19,18 +19,20 @@
 ### 🔗 Connect with Me
 
 <p align="left">
-  <a href="https://twitter.com/keshma_salgado" target="blank">
+  <a href="https://twitter.com/keshma_salgado" target="_blank">
     <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="Twitter" height="30" width="40" />
   </a>
-  <a href="https://www.linkedin.com/in/keshma-salgado-6541932a8" target="blank">
+  <a href="https://www.linkedin.com/in/keshma-salgado-6541932a8" target="_blank">
     <img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" height="30" width="40" />
   </a>
- <a href="https://github.com/keshmasalgado" target="blank">
-  <img align="center" src="https://skillicons.dev/icons?i=github" alt="GitHub" height="30" width="40" />
-</a>
-
-  <a href="https://sketchfab.com/keshmasalgado11/models" target="blank">
+  <a href="https://github.com/keshmasalgado" target="_blank">
+    <img align="center" src="https://skillicons.dev/icons?i=github" alt="GitHub" height="30" width="40" />
+  </a>
+  <a href="https://sketchfab.com/keshmasalgado11/models" target="_blank">
     <img align="center" src="https://static.sketchfab.com/img/press/logos/sketchfab-logo-white.svg" alt="Sketchfab" height="30" />
+  </a>
+  <a href="mailto:your.email@example.com" target="_blank">
+    <img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gmail/gmail-original.svg" alt="Gmail" height="30" />
   </a>
 </p>
 
@@ -46,21 +48,25 @@
   <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" height="50" alt="Tailwind CSS" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" height="50" alt="Flutter" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="50" alt="Git" />
-<img src="https://skillicons.dev/icons?i=github" height="50" alt="GitHub" />
- <img src="https://skillicons.dev/icons?i=vercel" height="50" alt="Vercel" />
+  <img src="https://skillicons.dev/icons?i=github" height="50" alt="GitHub" />
+  <img src="https://skillicons.dev/icons?i=vercel" height="50" alt="Vercel" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height="50" alt="MongoDB" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" height="50" alt="Blender" />
- <img src="https://skillicons.dev/icons?i=threejs" height="50" alt="Three.js" />
-  <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" height="50" alt="Gmail" />
+  <img src="https://skillicons.dev/icons?i=threejs" height="50" alt="Three.js" />
 </div>
 
 ---
 
 ### 📊 GitHub Stats
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=keshmasalgado&show_icons=true&locale=en&layout=compact" alt="keshmasalgado" /></p>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=keshmasalgado&show_icons=true&locale=en&layout=compact&theme=tokyonight" alt="Top Languages" />
+</p>
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=keshmasalgado&show_icons=true&locale=en" alt="keshmasalgado" /></p>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=keshmasalgado&show_icons=true&locale=en&theme=tokyonight" alt="GitHub Stats" />
+</p>
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=keshmasalgado&" alt="keshmasalgado" /></p>
-
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=keshmasalgado&theme=tokyonight" alt="GitHub Streak" />
+</p>
