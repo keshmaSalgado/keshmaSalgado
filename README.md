@@ -1,7 +1,5 @@
----
-<h1 align="center">Hey 👋What's Up?</h1>
+<h1 align="center">Hey 👋 What's Up?</h1>
 
-###
 <h3 align="center">A passionate Frontend and 3D Web Developer from Sri Lanka</h3>
 
 <p align="center">
@@ -31,44 +29,44 @@
     <img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" height="30" width="40" />
   </a>
   <a href="https://sketchfab.com/keshmasalgado11/models" target="blank">
-    <img align="center" src="https://cdn-icons-png.flaticon.com/512/5968/5968342.png" alt="Sketchfab" height="30" width="40" />
+    <img align="center" src="https://static.sketchfab.com/img/press/logos/sketchfab-logo-white.svg" alt="Sketchfab" height="30" />
   </a>
 </p>
 
+---
 
+### 💻 Tech Stack
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=ts" height="60" alt="typescript logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=nextjs" height="60" alt="nextjs logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=tailwind" height="60" alt="tailwindcss logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg" height="60" alt="storybook logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=graphql" height="60" alt="graphql logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=go" height="60" alt="go logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=rust" height="60" alt="rust logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=nestjs" height="60" alt="nestjs logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=py" height="60" alt="python logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=aws" height="60" alt="amazonwebservices logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="50" alt="HTML5" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="50" alt="CSS3" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="50" alt="JavaScript" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="50" alt="React" />
+  <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" height="50" alt="Tailwind CSS" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" height="50" alt="Flutter" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="50" alt="Git" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="50" alt="GitHub" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Vercel_logo_white.svg" height="50" alt="Vercel" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height="50" alt="MongoDB" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" height="50" alt="Blender" />
+  <a href="https://threejs.org/" target="_blank" rel="noreferrer" title="Three.js">
+  <img src="https://raw.githubusercontent.com/mrdoob/three.js/dev/logo.svg" alt="Three.js" width="50" height="50" />
+</a>
+  <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" height="50" alt="Gmail" />
 </div>
+
+---
 
 ### 📊 GitHub Stats
 
-<p>
-  <img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=keshmasalgado&show_icons=true&locale=en&layout=compact&theme=tokyonight" alt="Top Langs" />
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=keshmasalgado&show_icons=true&locale=en&layout=compact&theme=tokyonight" alt="Top Langs" />
 </p>
 
-<p>
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=keshmasalgado&show_icons=true&locale=en&theme=tokyonight" alt="GitHub Stats" />
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=keshmasalgado&show_icons=true&locale=en&theme=tokyonight" alt="GitHub Stats" />
 </p>
 
-<p>
-  <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=keshmasalgado&theme=tokyonight" alt="GitHub Streak" />
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=keshmasalgado&theme=tokyonight" alt="GitHub Streak" />
 </p>
