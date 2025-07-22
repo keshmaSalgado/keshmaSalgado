@@ -50,7 +50,7 @@
 </p>
 #### 🧠 3D, Animation & Motion
 <p align="left">
-  <a href="https://threejs.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/threejs/threejs-original.svg" width="40" height="40" alt="Three.js" /></a>
+  <a href="https://threejs.org/" target="_blank"><img src="[https://raw.githubusercontent.com/devicons/devicon/master/icons/threejs/threejs-original.svg](https://www.juegostudio.com/wp-content/uploads/2023/04/Logo6.png)" width="40" height="40" alt="Three.js" /></a>
   <a href="https://www.blender.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" width="40" height="40" alt="Blender" /></a>
   <a href="https://www.adobe.com/products/premiere.html" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Adobe_Premiere_Pro_Logo.svg" width="40" height="40" alt="Adobe Premiere" /></a>
   <a href="https://get.webgl.org/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/2/22/WebGL_Logo.svg" width="60" height="40" alt="WebGL" /></a>
