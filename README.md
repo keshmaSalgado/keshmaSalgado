@@ -1,9 +1,8 @@
 <h1 align="center">Hey 👋 What's Up?</h1>
 
 <h3 align="center">A passionate Frontend and 3D Web Developer</h3>
-
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=keshmasalgado&label=Profile%20views&color=0e75b6&style=flat" alt="keshmasalgado" />
+  <img src="https://komarev.com/ghpvc/?username=keshmasalgado&label=Profile%20views&color=0e75b6&style=flat&t=1" alt="keshmasalgado" />
 </p>
 
 ---
