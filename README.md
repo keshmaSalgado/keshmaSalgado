@@ -60,13 +60,9 @@
 ### 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=keshmasalgado&show_icons=true&locale=en&layout=compact&theme=radical" alt="Top Languages" />
-</p>
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=keshmasalgado&show_icons=true&locale=en&theme=radical" alt="GitHub Stats" />
-</p>
+<img src="https://github-readme-stats.vercel.app/api/top-langs?username=keshmasalgado&show_icons=true&locale=en&layout=compact&theme=tokyonight" alt="Top Languages" /></p><p align="center">
 
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=keshmasalgado&theme=radical" alt="GitHub Streak" />
-</p>
+<img src="https://github-readme-stats.vercel.app/api?username=keshmasalgado&show_icons=true&locale=en&theme=tokyonight" alt="GitHub Stats" /></p><p align="center">
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=keshmasalgado&theme=tokyonight" alt="GitHub Streak" /></p
