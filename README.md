@@ -19,7 +19,7 @@
 
 
 
-<p align="center">
+<p align="left">
   <a href="https://twitter.com/keshma_salgado" target="_blank">
     <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="Twitter" height="30" width="40" />
   </a>
@@ -40,7 +40,7 @@
 ### 💻 Tech Stack
 
 #### 🎨 Frontend
-<div align="center">
+<div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="50" alt="HTML5" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="50" alt="CSS3" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="50" alt="JavaScript" />
@@ -51,13 +51,13 @@
 </div>
 
 #### 🛠️ Backend
-<div align="center">
+<div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="50" alt="Node.js" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height="50" alt="MongoDB" />
 </div>
 
 #### ⚙️ Tools
-<div align="center">
+<div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="50" alt="Git" />
   <img src="https://skillicons.dev/icons?i=github" height="50" alt="GitHub" />
   <img src="https://skillicons.dev/icons?i=vercel" height="50" alt="Vercel" />
