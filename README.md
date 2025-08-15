@@ -39,8 +39,9 @@
 
 ### 💻 Tech Stack
 
-#### 🎨 Frontend
-<div align="left">
+
+<div align="center">
+  #### 🎨 Frontend
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="50" alt="HTML5" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="50" alt="CSS3" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="50" alt="JavaScript" />
@@ -50,24 +51,27 @@
   <img src="https://skillicons.dev/icons?i=threejs" height="50" alt="Three.js" />
 </div>
 
-#### 🛠️ Backend
-<div align="left">
+
+<div align="center">
+  #### 🛠️ Backend
   <img src="https://img.shields.io/badge/Express.js-white?logo=express&logoColor=black&style=for-the-badge" height="30" />
 
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="50" alt="Node.js" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height="50" alt="MongoDB" />
 </div>
 
-#### ⚙️ Tools
-<div align="left">
+
+<div align="center">
+  #### ⚙️ Tools
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="50" alt="Git" />
   <img src="https://skillicons.dev/icons?i=github" height="50" alt="GitHub" />
   <img src="https://skillicons.dev/icons?i=vercel" height="50" alt="Vercel" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" height="50" alt="Blender" />
 </div>
 
+<div align="center">
+  
 ### 📚 Currently Learning
-<div align="left">
 <img src="https://img.shields.io/badge/Express.js-white?logo=express&logoColor=black&style=for-the-badge" height="30" />
 
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="50" alt="Node.js" />
