@@ -66,7 +66,7 @@
 
 ### 📚 Currently Learning
 <div align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg" height="50" alt="Express.js" />
+<img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/express.svg" height="50" alt="Express.js" style="filter: invert(1);" />
 
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="50" alt="Node.js" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height="50" alt="MongoDB" />
