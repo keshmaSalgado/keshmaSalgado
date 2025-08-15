@@ -36,11 +36,12 @@
 </p>
 
 ---
-
 ### 💻 Tech Stack
 
-#### 🎨 Frontend
 <div align="center">
+
+  <!-- Frontend -->
+  <h3 align="center">🎨 Frontend</h3>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="50" alt="HTML5" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="50" alt="CSS3" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="50" alt="JavaScript" />
@@ -48,21 +49,20 @@
   <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" height="50" alt="Tailwind CSS" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" height="50" alt="Flutter" />
   <img src="https://skillicons.dev/icons?i=threejs" height="50" alt="Three.js" />
-</div>
 
-#### 🛠️ Backend
-<div align="center">
-  <img src="https://img.shields.io/badge/Express.js-white?logo=express&logoColor=black&style=for-the-badge" height="30" />
+  <!-- Backend -->
+  <h3 align="center">🛠️ Backend</h3>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="50" alt="Node.js" />
+  <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/express.svg" height="50" alt="Express.js" style="filter: invert(1);" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height="50" alt="MongoDB" />
-</div>
 
-#### ⚙️ Tools
-<div align="center">
+  <!-- Tools -->
+  <h3 align="center">⚙️ Tools</h3>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="50" alt="Git" />
   <img src="https://skillicons.dev/icons?i=github" height="50" alt="GitHub" />
   <img src="https://skillicons.dev/icons?i=vercel" height="50" alt="Vercel" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" height="50" alt="Blender" />
+
 </div>
 
 ---
