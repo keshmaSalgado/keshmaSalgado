@@ -31,6 +31,9 @@
   <a href="mailto:keshmasalgado11@gmail.com" target="_blank">
     <img src="https://skillicons.dev/icons?i=gmail" alt="Gmail" height="30" width="30" />
   </a>
+  <a href="https://discord.com/users/853832960289538075" target="_blank">
+    <img src="https://skillicons.dev/icons?i=discord" alt="Discord" height="30" width="30" style="margin-right:10px;" />
+  </a>
 </p>
 
 ---
