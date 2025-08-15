@@ -63,6 +63,12 @@
   <img src="https://skillicons.dev/icons?i=vercel" height="50" alt="Vercel" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" height="50" alt="Blender" />
 </div>
+
+### 📚 Currently Learning
+<div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" height="50" alt="Express.js" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" height="50" alt="C#" />
+</div>
 ---
 
 ### 📊 GitHub Stats
