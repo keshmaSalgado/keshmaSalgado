@@ -41,7 +41,7 @@
 <div align="center">
 
   <!-- Frontend -->
-  <h3 align="center">🎨 Frontend</h3>
+  <h4 align="center">🎨 Frontend</h4>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="50" alt="HTML5" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="50" alt="CSS3" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="50" alt="JavaScript" />
@@ -51,13 +51,13 @@
   <img src="https://skillicons.dev/icons?i=threejs" height="50" alt="Three.js" />
 
   <!-- Backend -->
-  <h3 align="center">🛠️ Backend</h3>
+  <h4 align="center">🛠️ Backend</h4>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="50" alt="Node.js" />
   <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/express.svg" height="50" alt="Express.js" style="filter: invert(1);" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height="50" alt="MongoDB" />
 
   <!-- Tools -->
-  <h3 align="center">⚙️ Tools</h3>
+  <h4 align="center">⚙️ Tools</h4>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="50" alt="Git" />
   <img src="https://skillicons.dev/icons?i=github" height="50" alt="GitHub" />
   <img src="https://skillicons.dev/icons?i=vercel" height="50" alt="Vercel" />
