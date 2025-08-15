@@ -17,7 +17,7 @@
 ---
 
 ### 🔗 Connect with Me
-<p align="center">
+<p align="left">
   <a href="https://twitter.com/keshma_salgado" target="_blank">
     <img src="https://skillicons.dev/icons?i=twitter" alt="Twitter" height="30" width="30" style="margin-right:10px;" />
   </a>
