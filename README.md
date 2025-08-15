@@ -1,6 +1,7 @@
 <h1 align="center">Hey 👋 What's Up?</h1>
 
 <h3 align="center">A passionate Frontend and 3D Web Developer</h3>
+
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=keshmasalgado&label=Profile%20views&color=0e75b6&style=flat&t=1" alt="keshmasalgado" />
 </p>
@@ -16,14 +17,32 @@
 ---
 
 ### 🔗 Connect with Me
-<p align="left"> <a href="https://twitter.com/keshma_salgado" target="_blank"> <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="Twitter" height="30" width="40" /> </a> <a href="https://www.linkedin.com/in/keshma-salgado-6541932a8" target="_blank"> <img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" height="30" width="40" /> </a> <a href="https://github.com/keshmasalgado" target="_blank"> <img align="center" src="https://skillicons.dev/icons?i=github" alt="GitHub" height="30" width="40" /> </a> <a href="https://sketchfab.com/keshmasalgado11/models" target="_blank"> <img align="center" src="https://static.sketchfab.com/img/press/logos/sketchfab-logo-white.svg" alt="Sketchfab" height="30" /> </a> <a href="mailto:keshmasalgado11@gmail.com" target="_blank"> <img align="center" src="https://skillicons.dev/icons?i=gmail" alt="Gmail" height="30" /> </a> </p>
+<p align="center">
+  <a href="https://twitter.com/keshma_salgado" target="_blank">
+    <img src="https://skillicons.dev/icons?i=twitter" alt="Twitter" height="30" width="30" style="margin-right:10px;" />
+  </a>
+  <a href="https://www.linkedin.com/in/keshma-salgado-6541932a8" target="_blank">
+    <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" height="30" width="30" style="margin-right:10px;" />
+  </a>
+  <a href="https://github.com/keshmasalgado" target="_blank">
+    <img src="https://skillicons.dev/icons?i=github" alt="GitHub" height="30" width="30" style="margin-right:10px;" />
+  </a>
+  <a href="https://sketchfab.com/keshmasalgado11/models" target="_blank">
+    <img src="https://skillicons.dev/icons?i=sketchfab" alt="Sketchfab" height="30" width="30" style="margin-right:10px;" />
+  </a>
+  <a href="mailto:keshmasalgado11@gmail.com" target="_blank">
+    <img src="https://skillicons.dev/icons?i=gmail" alt="Gmail" height="30" width="30" />
+  </a>
+</p>
+
 ---
+
 ### 💻 Tech Stack
 
-<div align="left">
+<div align="left" style="display:flex; flex-wrap:wrap; gap:8px;">
 
   <!-- Frontend -->
-  <h4 align="left">🎨 Frontend</h4>
+  <h4>🎨 Frontend</h4>
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
@@ -31,22 +50,20 @@
   <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white" />
 
   <!-- Backend -->
-  <h4 align="left">🛠️ Backend</h4>
+  <h4>🛠️ Backend</h4>
   <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" />
   <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" />
   <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" />
-
+  <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white" />
 
   <!-- Tools -->
-  <h4 align="left">⚙️ Tools</h4>
+  <h4>⚙️ Tools</h4>
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
   <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
   <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" />
   <img src="https://img.shields.io/badge/Blender-F5792A?style=for-the-badge&logo=blender&logoColor=white" />
 
 </div>
-
-
 
 ---
 
