@@ -28,7 +28,7 @@
     <img src="https://skillicons.dev/icons?i=github" alt="GitHub" height="30" width="30" style="margin-right:10px;" />
   </a>
   <a href="https://sketchfab.com/keshmasalgado11/models" target="_blank">
-  <img src="https://static.sketchfab.com/static/images/sketchfab_logo_black.png" alt="Sketchfab" height="30" style="margin-right:10px;" />
+  <img src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/sketchfab.svg" alt="Sketchfab" height="30" style="margin-right:10px;" />
 </a>
   <a href="mailto:keshmasalgado11@gmail.com" target="_blank">
     <img src="https://skillicons.dev/icons?i=gmail" alt="Gmail" height="30" width="30" />
