@@ -38,7 +38,7 @@
 ---
 ### 💻 Tech Stack
 
-<div align="center">
+<div align="left">
 
   <!-- Frontend -->
   <h4 align="center">🎨 Frontend</h4>
