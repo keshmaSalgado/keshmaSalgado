@@ -52,7 +52,9 @@
 
 #### 🛠️ Backend
 <div align="left">
-  <
+  <img src="https://img.shields.io/badge/Express.js-white?logo=express&logoColor=black&style=for-the-badge" height="30" />
+
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="50" alt="Node.js" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height="50" alt="MongoDB" />
 </div>
 
