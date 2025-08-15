@@ -16,23 +16,7 @@
 ---
 
 ### 🔗 Connect with Me
-<p align="left">
-  <a href="https://twitter.com/keshma_salgado" target="_blank">
-    <img src="https://skillicons.dev/icons?i=twitter" alt="Twitter" height="30" width="30" style="margin-right:10px;" title="Twitter" />
-  </a>
-  <a href="https://www.linkedin.com/in/keshma-salgado-6541932a8" target="_blank">
-    <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" height="30" width="30" style="margin-right:10px;" title="LinkedIn" />
-  </a>
-  <a href="https://github.com/keshmasalgado" target="_blank">
-    <img src="https://skillicons.dev/icons?i=github" alt="GitHub" height="30" width="30" style="margin-right:10px;" title="GitHub" />
-  </a>
-  <a href="https://sketchfab.com/keshmasalgado11/models" target="_blank">
-    <img src="https://skillicons.dev/icons?i=sketchfab" alt="Sketchfab" height="30" width="30" style="margin-right:10px;" title="Sketchfab" />
-  </a>
-  <a href="mailto:keshmasalgado11@gmail.com" target="_blank">
-    <img src="https://skillicons.dev/icons?i=gmail" alt="Gmail" height="30" width="30" title="Gmail" />
-  </a>
-</p>
+<p align="left"> <a href="https://twitter.com/keshma_salgado" target="_blank"> <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="Twitter" height="30" width="40" /> </a> <a href="https://www.linkedin.com/in/keshma-salgado-6541932a8" target="_blank"> <img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" height="30" width="40" /> </a> <a href="https://github.com/keshmasalgado" target="_blank"> <img align="center" src="https://skillicons.dev/icons?i=github" alt="GitHub" height="30" width="40" /> </a> <a href="https://sketchfab.com/keshmasalgado11/models" target="_blank"> <img align="center" src="https://static.sketchfab.com/img/press/logos/sketchfab-logo-white.svg" alt="Sketchfab" height="30" /> </a> <a href="mailto:keshmasalgado11@gmail.com" target="_blank"> <img align="center" src="https://skillicons.dev/icons?i=gmail" alt="Gmail" height="30" /> </a> </p>
 ---
 ### 💻 Tech Stack
 
