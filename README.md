@@ -48,9 +48,9 @@ I enjoy combining creativity with code to build visually engaging and high-perfo
 
 ## 📈 GitHub Stats
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=tokyonight)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=keshmaSalgado&show_icons=true&theme=tokyonight)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&theme=tokyonight)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=keshmaSalgado&layout=compact&theme=tokyonight)
 
 > ⚠️ Replace `YOUR_USERNAME` with your GitHub username.
 
