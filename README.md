@@ -3,79 +3,105 @@
 <h3 align="center">A passionate Frontend and 3D Web Developer</h3>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=keshmasalgado&label=Profile%20views&color=0e75b6&style=flat&t=1" alt="keshmasalgado" />
+  <img src="https://komarev.com/ghpvc/?username=keshmasalgado&label=Profile%20views&color=0e75b6&style=flat" alt="Profile Views" />
 </p>
 
 ---
 
-### 🏆 GitHub Trophies
+## 🏆 GitHub Trophies
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=keshmasalgado&theme=dracula&no-frame=true&margin-w=15" alt="trophies" />
+  <img src="https://github-profile-trophy.vercel.app/?username=keshmasalgado&theme=dracula&no-frame=true&margin-w=15" alt="Trophies" />
 </p>
 
 ---
 
-### 🔗 Connect with Me
-<p align="left">
+## 🔗 Connect with Me
+
+<p align="center">
   <a href="https://twitter.com/keshma_salgado" target="_blank">
-    <img src="https://skillicons.dev/icons?i=twitter" alt="Twitter" height="30" width="30" style="margin-right:10px;" />
+    <img src="https://skillicons.dev/icons?i=twitter" width="35" />
   </a>
+  &nbsp;
   <a href="https://www.linkedin.com/in/keshma-salgado-6541932a8" target="_blank">
-    <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" height="30" width="30" style="margin-right:10px;" />
+    <img src="https://skillicons.dev/icons?i=linkedin" width="35" />
   </a>
+  &nbsp;
   <a href="https://github.com/keshmasalgado" target="_blank">
-    <img src="https://skillicons.dev/icons?i=github" alt="GitHub" height="30" width="30" style="margin-right:10px;" />
+    <img src="https://skillicons.dev/icons?i=github" width="35" />
   </a>
-  <a href="https://sketchfab.com/keshmasalgado11/models" target="_blank"> <img src="https://static.sketchfab.com/img/press/logos/sketchfab-logo-white.svg" alt="Sketchfab" height="30"  width="30" /> </a>
+  &nbsp;
+  <a href="https://sketchfab.com/keshmasalgado11/models" target="_blank">
+    <img src="https://cdn.simpleicons.org/sketchfab/white" width="35" />
+  </a>
+  &nbsp;
   <a href="mailto:keshmasalgado11@gmail.com" target="_blank">
-    <img src="https://skillicons.dev/icons?i=gmail" alt="Gmail" height="30" width="30" />
+    <img src="https://skillicons.dev/icons?i=gmail" width="35" />
   </a>
+  &nbsp;
   <a href="https://discord.com/users/853832960289538075" target="_blank">
-    <img src="https://skillicons.dev/icons?i=discord" alt="Discord" height="30" width="30" style="margin-right:10px;" />
+    <img src="https://skillicons.dev/icons?i=discord" width="35" />
   </a>
 </p>
 
 ---
 
-### 💻 Tech Stack
+## 💻 Tech Stack
 
-<div align="left" style="display:flex; flex-wrap:wrap; gap:8px;">
+### 🎨 Frontend
 
-  <!-- Frontend -->
-  <h4>🎨 Frontend</h4>
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white" />
+<p>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white"/>
+</p>
 
-  <!-- Backend -->
-  <h4>🛠️ Backend</h4>
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" />
-  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" />
-  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" />
+### 🛠 Backend
 
-  <!-- Tools -->
-  <h4>⚙️ Tools</h4>
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
-  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" />
-  <img src="https://img.shields.io/badge/Blender-F5792A?style=for-the-badge&logo=blender&logoColor=white" />
+<p>
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white"/>
+</p>
 
-</div>
+### ⚙️ Tools & 3D
+
+<p>
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Blender-F5792A?style=for-the-badge&logo=blender&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white"/>
+</p>
 
 ---
 
-### 📊 GitHub Stats
+## 📊 GitHub Stats
+
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=keshmasalgado&show_icons=true&locale=en&layout=compact&theme=radical" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api?username=keshmasalgado&show_icons=true&theme=radical&cache_seconds=86400" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=keshmasalgado&show_icons=true&locale=en&theme=radical" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=keshmasalgado&layout=compact&theme=radical&cache_seconds=86400" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=keshmasalgado&theme=radical" alt="GitHub Streak" />
+  <img src="https://streak-stats.demolab.com/?user=keshmasalgado&theme=radical" />
 </p>
+
+---
+
+## 🚀 About Me
+
+- 🎯 Frontend & 3D Web Developer  
+- 💻 React | Three.js | React Three Fiber  
+- 🎨 Blender & WebGL Enthusiast  
+- 🚀 Building interactive web experiences  
+- 🌱 Always learning new tech  
+
+---
+
+⭐️ From [Keshma Salgado](https://github.com/keshmasalgado)
