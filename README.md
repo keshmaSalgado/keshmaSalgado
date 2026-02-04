@@ -35,10 +35,24 @@
   
 ### 💻 Tech Stack
 
-**Languages**
+**Languages & Frameworks**
 <p align="left">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=js,cs,html,css" />
+    <img src="https://skillicons.dev/icons?i=cs,dotnet,js,html,css" />
+  </a>
+</p>
+
+**Frontend & 3D**
+<p align="left">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=react,tailwind,threejs,blender,figma" />
+  </a>
+</p>
+
+**Backend & Tools**
+<p align="left">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,git,github,vercel,vscode,postman" />
   </a>
 </p>
 
