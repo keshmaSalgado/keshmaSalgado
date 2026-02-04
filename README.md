@@ -1,9 +1,9 @@
 <h1 align="center">Hey 👋 What's Up?</h1>
 
-<h3 align="center">A passionate Frontend and 3D Web Developer</h3>
+<h3 align="center">A Passionate Frontend & 3D Web Developer</h3>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=keshmasalgado&label=Profile%20views&color=0e75b6&style=flat" alt="Profile Views" />
+  <img src="https://komarev.com/ghpvc/?username=keshmasalgado&label=Profile%20Views&color=0e75b6&style=flat" />
 </p>
 
 ---
@@ -11,35 +11,35 @@
 ## 🏆 GitHub Trophies
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=keshmasalgado&theme=dracula&no-frame=true&margin-w=15" alt="Trophies" />
+  <img src="https://github-profile-trophy.vercel.app/?username=keshmasalgado&theme=onedark&row=1&column=6&no-frame=true" />
 </p>
 
 ---
 
-## 🔗 Connect with Me
+## 🔗 Connect With Me
 
 <p align="center">
-  <a href="https://twitter.com/keshma_salgado" target="_blank">
+  <a href="https://twitter.com/keshma_salgado">
     <img src="https://skillicons.dev/icons?i=twitter" width="35" />
   </a>
   &nbsp;
-  <a href="https://www.linkedin.com/in/keshma-salgado-6541932a8" target="_blank">
+  <a href="https://www.linkedin.com/in/keshma-salgado-6541932a8">
     <img src="https://skillicons.dev/icons?i=linkedin" width="35" />
   </a>
   &nbsp;
-  <a href="https://github.com/keshmasalgado" target="_blank">
+  <a href="https://github.com/keshmasalgado">
     <img src="https://skillicons.dev/icons?i=github" width="35" />
   </a>
   &nbsp;
-  <a href="https://sketchfab.com/keshmasalgado11/models" target="_blank">
+  <a href="https://sketchfab.com/keshmasalgado11/models">
     <img src="https://cdn.simpleicons.org/sketchfab/white" width="35" />
   </a>
   &nbsp;
-  <a href="mailto:keshmasalgado11@gmail.com" target="_blank">
+  <a href="mailto:keshmasalgado11@gmail.com">
     <img src="https://skillicons.dev/icons?i=gmail" width="35" />
   </a>
   &nbsp;
-  <a href="https://discord.com/users/853832960289538075" target="_blank">
+  <a href="https://discord.com/users/853832960289538075">
     <img src="https://skillicons.dev/icons?i=discord" width="35" />
   </a>
 </p>
@@ -81,15 +81,15 @@
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=keshmasalgado&show_icons=true&theme=radical&cache_seconds=86400" />
+  <img src="https://github-readme-stats.vercel.app/api?username=keshmasalgado&show_icons=true&theme=radical&hide_border=true" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=keshmasalgado&layout=compact&theme=radical&cache_seconds=86400" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=keshmasalgado&layout=compact&theme=radical&hide_border=true" />
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com/?user=keshmasalgado&theme=radical" />
+  <img src="https://streak-stats.demolab.com?user=keshmasalgado&theme=radical&hide_border=true" />
 </p>
 
 ---
@@ -98,9 +98,9 @@
 
 - 🎯 Frontend & 3D Web Developer  
 - 💻 React | Three.js | React Three Fiber  
-- 🎨 Blender & WebGL Enthusiast  
-- 🚀 Building interactive web experiences  
-- 🌱 Always learning new tech  
+- 🎨 Blender & WebGL  
+- 🚀 Building Interactive Experiences  
+- 🌱 Always Learning  
 
 ---
 
