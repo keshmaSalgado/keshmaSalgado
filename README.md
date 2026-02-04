@@ -34,9 +34,9 @@
 
 ### 💻 Tech Stack
 
-| **Languages** | **Frontend** | **Backend & Database** | **Tools & 3D** |
+| **Languages** | **Frontend & 3D** | **Backend & Database** | **Tools & Design** |
 |:---:|:---:|:---:|:---:|
-| <img src="https://skillicons.dev/icons?i=js" width="45"/> <img src="https://skillicons.dev/icons?i=cs" width="45"/> | <img src="https://skillicons.dev/icons?i=html,css,react,tailwind" width="45" style="margin: 2px"/> | <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb" width="45" style="margin: 2px"/> | <img src="https://skillicons.dev/icons?i=git,github,vercel,blender" width="45" style="margin: 2px"/> |
+| <img src="https://skillicons.dev/icons?i=js,cs" width="45" style="margin: 2px"/> | <img src="https://skillicons.dev/icons?i=html,css,react,tailwind,threejs" width="45" style="margin: 2px"/> | <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb" width="45" style="margin: 2px"/> | <img src="https://skillicons.dev/icons?i=git,github,vercel,blender,vscode,figma,postman" width="45" style="margin: 2px"/> |
 
 </div>
 
