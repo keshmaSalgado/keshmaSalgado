@@ -1,22 +1,22 @@
 # 👋 Hi, I'm Keshma Salgado  
 
-🎯 **Frontend & 3D Web Developer**  
-💻 **React | Three.js | React Three Fiber**  
-🎨 **Blender | WebGL**  
-🚀 Building Interactive Digital Experiences  
-🌱 Currently Learning & Working With **C# | WPF**
+💻 **Full-Stack & 3D Web Developer**  
+🎯 React • React Three Fiber • Three.js • Node.js  
+🎨 Blender • WebGL  
+🚀 Building immersive apps with 3D, animations, and modern stacks  
+🌱 Currently working with **C# | WPF**
 
 ---
 
 ## 🧑‍💻 About Me
 
-I'm a passionate developer who loves creating immersive web experiences using modern frontend and 3D technologies.  
-I enjoy combining creativity with code to build visually engaging and high-performance applications.
+I'm a passionate Full-Stack & 3D Web Developer who loves building interactive and visually stunning web experiences.  
+I enjoy mixing creativity with technology to create high-performance and user-friendly applications.
 
-- 🔭 Working on 3D web projects  
-- 📚 Constantly learning new technologies  
-- 💡 Interested in UI/UX & interactive design  
-- ⚡ Problem solver & tech enthusiast  
+- 🔭 Focused on 3D web development  
+- 📚 Always learning new technologies  
+- 💡 Interested in UI/UX & animations  
+- ⚡ Turning ideas into real products  
 
 ---
 
@@ -28,23 +28,37 @@ I enjoy combining creativity with code to build visually engaging and high-perfo
 - 🎨 Tailwind CSS  
 
 ### 3D & Graphics
-- 🧩 Three.js  
 - 🌌 React Three Fiber  
+- 🧩 Three.js  
 - 🎥 Blender  
 - 💡 WebGL  
 
-### Desktop Development
+### Backend
+- 🟢 Node.js  
+- 🚀 Express.js  
+- 🗄️ MySQL / MongoDB  
+
+### Desktop
 - 🖥️ C#  
 - 🪟 WPF  
 
-### Backend & Tools
-- 🟢 Node.js  
-- 🗄️ MySQL  
+### Tools
 - 🛠️ Git & GitHub  
 - 🚀 Vercel  
+- 📦 NPM  
 
 ---
 
+## 📌 Featured Projects
+
+🚧 *Coming Soon...*  
+(Add your best projects here)
+
+- 🔹 3D Portfolio Website  
+- 🔹 Interactive Web Applications  
+- 🔹 Desktop App with C# WPF  
+
+---
 
 ## 📈 GitHub Stats
 
@@ -52,16 +66,14 @@ I enjoy combining creativity with code to build visually engaging and high-perfo
 
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=keshmaSalgado&layout=compact&theme=tokyonight)
 
-> ⚠️ Replace `YOUR_USERNAME` with your GitHub username.
-
 ---
 
 ## 📫 Connect With Me
 
-- 🌐 Portfolio: *Coming Soon*  
-- 💼 LinkedIn: *Add Link*  
-- 📧 Email: *Add Email*  
+- 🌐 Portfolio: Coming Soon  
+- 💼 LinkedIn: Add Link  
+- 📧 Email: Add Email  
 
 ---
 
-⭐ **Feel free to explore my repositories and leave a star if you like my work!**
+⭐ Thanks for visiting! Feel free to explore my projects and follow my journey 🚀
