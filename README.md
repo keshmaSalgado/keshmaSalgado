@@ -32,13 +32,29 @@
 
 <div align="center">
 
+  
 ### 💻 Tech Stack
 
-| **Languages** | **Frontend & 3D** | **Backend & Database** | **Tools & Design** |
-|:---:|:---:|:---:|:---:|
-| <img src="https://skillicons.dev/icons?i=js,cs" width="45" style="margin: 2px"/> | <img src="https://skillicons.dev/icons?i=html,css,react,tailwind,threejs" width="45" style="margin: 2px"/> | <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb" width="45" style="margin: 2px"/> | <img src="https://skillicons.dev/icons?i=git,github,vercel,blender,vscode,figma,postman" width="45" style="margin: 2px"/> |
+**Languages**
+<p align="left">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=js,cs,html,css" />
+  </a>
+</p>
 
-</div>
+**Frontend & 3D**
+<p align="left">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=react,tailwind,threejs,blender,figma" />
+  </a>
+</p>
+
+**Backend & Tools**
+<p align="left">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,git,github,vercel,vscode,postman" />
+  </a>
+</p>
 
 ---
 
