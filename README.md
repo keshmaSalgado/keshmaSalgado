@@ -62,9 +62,9 @@ I enjoy mixing creativity with technology to create high-performance and user-fr
 
 ## 📈 GitHub Stats
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=keshmaSalgado&show_icons=true&theme=tokyonight)
+![GitHub Stats](https://github-readme-stats-git-main-keshma.vercel.app/api?username=keshmaSalgado&show_icons=true&hide_border=true)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=keshmaSalgado&layout=compact&theme=tokyonight)
+![Top Languages](https://github-readme-stats-git-main-keshma.vercel.app/api/top-langs/?username=keshmaSalgado&layout=compact&hide_border=true)
 
 ---
 
