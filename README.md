@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&pause=1000&color=2196F3&center=true&vCenter=true&width=600&lines=Hi+there%2C+I'm+Keshma+Salgado+%F0%9F%91%8B;Frontend+Developer;3D+Web+Enthusiast;Currently+Learning+C%23" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&pause=1000&color=2196F3&center=true&vCenter=true&width=650&lines=Hi+there%2C+I'm+Keshma+Salgado+%F0%9F%91%8B;Frontend+%26+3D+Web+Developer;Currently+Learning+C%23+%26+Go" alt="Typing SVG" />
 </h1>
 
 <p align="center">
@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <em>A passionate Frontend & 3D Web Developer exploring the world of interactive web experiences — turning coffee into code and Blender sculpts into living, breathing web worlds. ☕🌐</em>
+  <em>A passionate Frontend & 3D Web Developer exploring the world of interactive web experiences —<br/>turning coffee into code and Blender sculpts into living, breathing web worlds. ☕🌐</em>
 </p>
 
 ---
@@ -17,10 +17,10 @@
 ## 👩‍💻 About Me
 
 - 🔭 Currently working on **3D Web Projects & Frontend Architecture**
-- 🌱 Expanding into backend with **C#** and **.NET**
+- 🌱 Expanding into backend with **C#**, **.NET**, and **Go**
 - 🎨 I love merging **Blender** creations with **Three.js** to build immersive web experiences
 - 💡 Always exploring the intersection of **design, code, and 3D**
-- ⚡ Fun fact: I turn coffee into code and 3D models
+- ⚡ Fun fact: I turn coffee into code and 3D models into web worlds
 
 ---
 
@@ -30,7 +30,7 @@
 
 <p align="left">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=cs,dotnet,js,html,css" />
+    <img src="https://skillicons.dev/icons?i=cs,dotnet,go,js,html,css" />
   </a>
 </p>
 
@@ -55,15 +55,21 @@
 ## 📊 GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=keshmasalgado&show_icons=true&locale=en&theme=tokyonight" alt="GitHub Stats" height="180"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=keshmasalgado&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="180" alt="GitHub Stats"/>
   &nbsp;&nbsp;
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=keshmasalgado&show_icons=true&locale=en&layout=compact&theme=tokyonight" alt="Top Languages" height="180"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=keshmasalgado&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" height="180" alt="Top Languages"/>
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=keshmasalgado&theme=tokyonight" alt="GitHub Streak" />
+  <img src="https://streak-stats.demolab.com?user=keshmasalgado&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=keshmasalgado&theme=tokyo-night&hide_border=true" alt="Activity Graph" />
 </div>
 
 ---
@@ -71,9 +77,7 @@
 ## 🏆 GitHub Trophies
 
 <div align="center">
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=keshmasalgado&theme=tokyonight&no-frame=true&margin-w=15" alt="GitHub Trophies" />
-  </a>
+  <img src="https://github-profile-trophy.vercel.app/?username=keshmasalgado&theme=tokyonight&no-frame=true&margin-w=15&row=1" alt="GitHub Trophies" />
 </div>
 
 ---
