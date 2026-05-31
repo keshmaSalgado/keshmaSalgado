@@ -13,19 +13,18 @@
     turning coffee into code and Blender sculpts into living, breathing web worlds. ☕🌐
   </em>
 </p>
----
+
 
 ## 👨‍💻 About Me
 
-- 🔭 Currently working on **3D Web Projects, Frontend Architecture & Spring Boot Applications**
+- 🔭 Currently building **Full-Stack Applications, 3D Web Experiences, and Spring Boot Projects**
 - 🌱 Currently learning **C#**, **.NET**, and **Go**
-- ☕ Experienced with **Java**, **Spring Boot**, **React**, and modern web technologies
-- 🎨 I love merging **Blender** creations with **Three.js** to build immersive web experiences
-- 🚀 Building interactive experiences with **React Three Fiber** and modern web technologies
-- 💡 Always exploring the intersection of **design, code, backend systems, and 3D**
+- ☕ Skilled in **Java**, **Spring Boot**, **React**, **Node.js**, and modern web technologies
+- 🎨 Passionate about combining **Blender**, **Three.js**, and **React Three Fiber** to create immersive web experiences
+- 🚀 Experienced in developing responsive, interactive, and scalable web applications
+- 💡 Interested in **Full-Stack Development**, **3D Web Technologies**, and **Software Architecture**
 - 🎯 Goal: Become a world-class **Full-Stack & 3D Web Developer**
-
----
+  
 
 ## 🛠️ Tech Stack
 
@@ -61,7 +60,6 @@
   </a>
 </p>
 
----
 
 ## 📊 GitHub Stats
 
@@ -83,20 +81,7 @@
   <img src="https://streak-stats.demolab.com?user=keshmasalgado&theme=tokyonight&hide_border=true&date_format=M%20j%5B%2C%20Y%5D" alt="GitHub Streak" />
 </div>
 
----
 
-## 🚀 Featured Skills
-
-```text
-Frontend Development   ████████████████░░░
-React & R3F            ███████████████░░░░
-Three.js & 3D Web      ████████████████░░░
-Java & Spring Boot     ███████████░░░░░░░░
-Node.js Backend        █████████████░░░░░░
-UI/UX Design           ████████████░░░░░░░
-```
-
----
 
 ## 🔗 Connect With Me
 
