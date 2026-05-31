@@ -21,12 +21,12 @@
 ## 👨‍💻 About Me
 
 - 🔭 Currently working on **3D Web Projects, Frontend Architecture & Spring Boot Applications**
-- 🌱 Expanding into backend with **Java**, **Spring Boot**, **C#**, **.NET**, and **Go**
+- 🌱 Currently learning **C#**, **.NET**, and **Go**
+- ☕ Experienced with **Java**, **Spring Boot**, **React**, and modern web technologies
 - 🎨 I love merging **Blender** creations with **Three.js** to build immersive web experiences
-- 🚀 Building interactive experiences with **React**, **React Three Fiber**, and modern web technologies
+- 🚀 Building interactive experiences with **React Three Fiber** and modern web technologies
 - 💡 Always exploring the intersection of **design, code, backend systems, and 3D**
-- 🎯 Goal: Become a **Full-Stack & 3D Web Developer**
-- ⚡ Fun fact: I turn coffee into code and 3D models into web worlds
+- 🎯 Goal: Become a world-class **Full-Stack & 3D Web Developer**
 
 ---
 
