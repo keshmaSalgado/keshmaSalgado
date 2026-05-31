@@ -1,13 +1,10 @@
 <h1 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&pause=1000&color=2196F3&center=true&vCenter=true&width=650&lines=Hi+there%2C+I'm+Keshma+Salgado+%F0%9F%91%8B;Frontend+%26+3D+Web+Developer;C%23+%7C+Go+Learner" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&pause=1000&color=2196F3&center=true&vCenter=true&width=700&lines=Hi+there%2C+I'm+Keshma+Salgado+%F0%9F%91%8B;Frontend+Developer;3D+Web+Developer;Java+%26+Spring+Boot+Developer;Learning+C%23+and+Go" alt="Typing SVG" />
 </h1>
 
 <p align="center">
-  <a href="https://github.com/keshmasalgado">
-    <img src="https://komarev.com/ghpvc/?username=keshmasalgado&label=Profile%20Views&color=0e75b6&style=flat" alt="Profile Views" />
-  </a>
+  <img src="https://komarev.com/ghpvc/?username=keshmasalgado&label=Profile+Views&color=2196F3&style=flat-square" alt="Profile Views" />
 </p>
-
 <p align="center">
   <em>
     A passionate Frontend & 3D Web Developer exploring the world of interactive web experiences —
