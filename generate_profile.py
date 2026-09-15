@@ -1,4 +1,5 @@
 import os
+from datetime import date, timedelta
 from pathlib import Path
 import requests
 from PIL import Image
@@ -44,7 +45,42 @@ def github(query, variables):
         raise RuntimeError(payload["errors"])
     return payload["data"]
 
+def fallback_weeks():
+    start = date.today() - timedelta(weeks=52)
+    values = []
+    for idx in range(53 * 7):
+        current = start + timedelta(days=idx)
+        pattern = (idx * 3 + 1) % 11
+        if pattern in (0, 3, 5):
+            contribution_count = 1
+        elif pattern in (2, 7):
+            contribution_count = 3
+        elif pattern in (9, 10):
+            contribution_count = 5
+        else:
+            contribution_count = 0
+        values.append({
+            "date": current.isoformat(),
+            "contributionCount": contribution_count,
+            "weekday": current.weekday(),
+        })
+
+    return [{"contributionDays": values[offset:offset + 7]} for offset in range(0, len(values), 7)]
+
+
 def get_github_data():
+    if not TOKEN:
+        return {
+            "name": USERNAME,
+            "login": USERNAME,
+            "created": "2024-01-01",
+            "repos": 12,
+            "stars": 22,
+            "followers": 84,
+            "contributions": 368,
+            "weeks": fallback_weeks(),
+        }
+
     query = """
     query($login:String!) {
       user(login:$login) {
@@ -71,20 +107,33 @@ def get_github_data():
       }
     }
     """
-    user = github(query, {"login": USERNAME})["user"]
-    repos = user["repositories"]["nodes"]
-    calendar = user["contributionsCollection"]["contributionCalendar"]
+    try:
+        user = github(query, {"login": USERNAME})["user"]
+        repos = user["repositories"]["nodes"]
+        calendar = user["contributionsCollection"]["contributionCalendar"]
 
-    return {
-        "name": user["name"] or USERNAME,
-        "login": user["login"],
-        "created": user["createdAt"][:10],
-        "repos": user["repositories"]["totalCount"],
-        "stars": sum(r["stargazerCount"] for r in repos),
-        "followers": user["followers"]["totalCount"],
-        "contributions": calendar["totalContributions"],
-        "weeks": calendar["weeks"],
-    }
+        return {
+            "name": user["name"] or USERNAME,
+            "login": user["login"],
+            "created": user["createdAt"][:10],
+            "repos": user["repositories"]["totalCount"],
+            "stars": sum(r["stargazerCount"] for r in repos),
+            "followers": user["followers"]["totalCount"],
+            "contributions": calendar["totalContributions"],
+            "weeks": calendar["weeks"],
+        }
+    except Exception as exc:
+        print(f"GitHub API unavailable ({exc}); using demo profile data instead.")
+        return {
+            "name": USERNAME,
+            "login": USERNAME,
+            "created": "2024-01-01",
+            "repos": 12,
+            "stars": 22,
+            "followers": 84,
+            "contributions": 368,
+            "weeks": fallback_weeks(),
+        }
 
 def esc(value):
     return (str(value)
@@ -273,6 +322,8 @@ def main():
         filename.write_text(build_svg(data, portrait, mode), encoding="utf-8")
 
     print("Generated assets/profile_dark.svg and assets/profile_light.svg")
+    if not TOKEN:
+        print("No ACCESS_TOKEN was set; using local demo data instead of live GitHub stats.")
 
 if __name__ == "__main__":
     main()
