@@ -1,38 +1,69 @@
 import os
-from datetime import date, timedelta
 from pathlib import Path
-import requests
-from PIL import Image
+
+from PIL import Image, ImageEnhance, ImageOps
 
 ROOT = Path(__file__).parent
 ASSETS = ROOT / "assets"
+
 USERNAME = os.getenv("USER_NAME", "keshmaSalgado")
+DISPLAY_NAME = os.getenv("DISPLAY_NAME", "Keshma Salgado")
 TOKEN = os.getenv("ACCESS_TOKEN")
 
-# ASCII settings
-CHARS = "@%#*+=-:. "
+EMAIL = os.getenv("PROFILE_EMAIL", "keshmasalgado@gmail.com")
+LINKEDIN = os.getenv("PROFILE_LINKEDIN", "linkedin.com/in/keshmasalgado")
+DISCORD = os.getenv("PROFILE_DISCORD", "keshmaSalgado")
 
-def ascii_portrait(path, width=48):
+FONT = "JetBrains Mono, Consolas, Liberation Mono, monospace"
+ASCII_CHARS = " .,:;irsXA253hMHGS#9B&@"
+
+
+def esc(value):
+    return (
+        str(value)
+        .replace("&", "&amp;")
+        .replace("<", "&lt;")
+        .replace(">", "&gt;")
+        .replace('"', "&quot;")
+    )
+
+
+def ascii_portrait(path, width=76):
     image = Image.open(path).convert("L")
     w, h = image.size
 
-    # Keep the face/upper body and correct terminal-character aspect ratio.
-    image = image.crop((0, 0, w, int(h * 0.94)))
-    height = max(1, int(image.height / image.width * width * 0.43))
-    image = image.resize((width, height))
+    # Crop around the face and upper body so the ASCII portrait reads clearly.
+    crop = (
+        int(w * 0.16),
+        int(h * 0.01),
+        int(w * 0.98),
+        int(h * 0.90),
+    )
+    image = image.crop(crop)
+    image = ImageOps.autocontrast(image)
+    image = ImageEnhance.Contrast(image).enhance(1.45)
+    image = ImageEnhance.Sharpness(image).enhance(1.25)
+
+    height = max(1, int(image.height / image.width * width * 0.66))
+    image = image.resize((width, height), Image.Resampling.LANCZOS)
 
     lines = []
     for y in range(image.height):
         row = []
         for x in range(image.width):
-            p = image.getpixel((x, y))
-            row.append(CHARS[p * (len(CHARS) - 1) // 255])
+            pixel = image.getpixel((x, y))
+            index = (255 - pixel) * (len(ASCII_CHARS) - 1) // 255
+            row.append(ASCII_CHARS[index])
         lines.append("".join(row).rstrip())
     return lines
+
 
 def github(query, variables):
     if not TOKEN:
         raise RuntimeError("Set ACCESS_TOKEN before running the generator.")
+
+    import requests
+
     response = requests.post(
         "https://api.github.com/graphql",
         json={"query": query, "variables": variables},
@@ -45,269 +76,307 @@ def github(query, variables):
         raise RuntimeError(payload["errors"])
     return payload["data"]
 
-def fallback_weeks():
-    start = date.today() - timedelta(weeks=52)
-    values = []
-    for idx in range(53 * 7):
-        current = start + timedelta(days=idx)
-        pattern = (idx * 3 + 1) % 11
-        if pattern in (0, 3, 5):
-            contribution_count = 1
-        elif pattern in (2, 7):
-            contribution_count = 3
-        elif pattern in (9, 10):
-            contribution_count = 5
-        else:
-            contribution_count = 0
-        values.append({
-            "date": current.isoformat(),
-            "contributionCount": contribution_count,
-            "weekday": current.weekday(),
-        })
 
-    return [{"contributionDays": values[offset:offset + 7]} for offset in range(0, len(values), 7)]
+def fallback_data():
+    return {
+        "name": DISPLAY_NAME,
+        "login": USERNAME,
+        "repos": 95,
+        "commits": 2118,
+        "stars": 342,
+        "followers": 196,
+    }
 
 
 def get_github_data():
     if not TOKEN:
-        return {
-            "name": USERNAME,
-            "login": USERNAME,
-            "created": "2024-01-01",
-            "repos": 12,
-            "stars": 22,
-            "followers": 84,
-            "contributions": 368,
-            "weeks": fallback_weeks(),
-        }
+        return fallback_data()
 
     query = """
     query($login:String!) {
       user(login:$login) {
         name
         login
-        createdAt
         followers { totalCount }
-        repositories(ownerAffiliations:OWNER, first:100) {
+        repositories(ownerAffiliations:OWNER, first:100, orderBy:{field:STARGAZERS, direction:DESC}) {
           totalCount
           nodes { stargazerCount }
         }
         contributionsCollection {
-          contributionCalendar {
-            totalContributions
-            weeks {
-              contributionDays {
-                date
-                contributionCount
-                weekday
-              }
-            }
-          }
+          totalCommitContributions
         }
       }
     }
     """
+
     try:
         user = github(query, {"login": USERNAME})["user"]
         repos = user["repositories"]["nodes"]
-        calendar = user["contributionsCollection"]["contributionCalendar"]
+        commits = user["contributionsCollection"]["totalCommitContributions"]
 
         return {
-            "name": user["name"] or USERNAME,
+            "name": user["name"] or DISPLAY_NAME,
             "login": user["login"],
-            "created": user["createdAt"][:10],
             "repos": user["repositories"]["totalCount"],
-            "stars": sum(r["stargazerCount"] for r in repos),
+            "commits": commits,
+            "stars": sum(repo["stargazerCount"] for repo in repos),
             "followers": user["followers"]["totalCount"],
-            "contributions": calendar["totalContributions"],
-            "weeks": calendar["weeks"],
         }
     except Exception as exc:
-        print(f"GitHub API unavailable ({exc}); using demo profile data instead.")
-        return {
-            "name": USERNAME,
-            "login": USERNAME,
-            "created": "2024-01-01",
-            "repos": 12,
-            "stars": 22,
-            "followers": 84,
-            "contributions": 368,
-            "weeks": fallback_weeks(),
-        }
+        print(f"GitHub API unavailable ({exc}); using profile preview data instead.")
+        return fallback_data()
 
-def esc(value):
-    return (str(value)
-            .replace("&", "&amp;")
-            .replace("<", "&lt;")
-            .replace(">", "&gt;")
-            .replace('"', "&quot;"))
 
-def streaks(weeks):
-    days = [d for w in weeks for d in w["contributionDays"]]
-    days.sort(key=lambda x: x["date"])
-
-    longest = current = 0
-    for d in days:
-        if d["contributionCount"] > 0:
-            current += 1
-            longest = max(longest, current)
-        else:
-            current = 0
-
-    trailing = 0
-    for d in reversed(days):
-        if d["contributionCount"] > 0:
-            trailing += 1
-        else:
-            break
-    return trailing, longest
-
-def heatmap(weeks, dark):
-    colors = (
-        ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]
-        if dark else
-        ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"]
+def text(x, y, value, size=16, fill="#dbeafe", weight="400", anchor="start", opacity=1):
+    return (
+        f'<text x="{x}" y="{y}" font-family="{FONT}" font-size="{size}" '
+        f'font-weight="{weight}" fill="{fill}" text-anchor="{anchor}" '
+        f'opacity="{opacity}">{esc(value)}</text>'
     )
-    counts = [d["contributionCount"] for w in weeks for d in w["contributionDays"]]
-    maximum = max(counts or [0])
 
-    def level(n):
-        if n == 0 or maximum == 0:
-            return 0
-        ratio = n / maximum
-        return 1 if ratio <= .25 else 2 if ratio <= .5 else 3 if ratio <= .75 else 4
 
-    parts = []
-    last_month = None
-    delay = 0.0
+def line(x1, y1, x2, y2, stroke="#2f77ad", width=1.5, dash=None, opacity=1):
+    dash_part = f' stroke-dasharray="{dash}"' if dash else ""
+    return (
+        f'<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" '
+        f'stroke="{stroke}" stroke-width="{width}" opacity="{opacity}"{dash_part}/>'
+    )
 
-    for wi, week in enumerate(weeks):
-        x = 610 + wi * 9
-        if week["contributionDays"]:
-            month = int(week["contributionDays"][0]["date"][5:7])
-            if month != last_month:
-                parts.append(
-                    f'<text x="{x}" y="388" class="month">{["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][month-1]}</text>'
-                )
-                last_month = month
 
-        for day in week["contributionDays"]:
-            y = 397 + day["weekday"] * 9
-            n = day["contributionCount"]
-            title = f'{n} contribution{"s" if n != 1 else ""} on {day["date"]}'
-            parts.append(
-                f'<rect x="{x}" y="{y}" width="7" height="7" rx="1.5" fill="{colors[level(n)]}" opacity="0">'
-                f'<title>{esc(title)}</title>'
-                f'<animate attributeName="opacity" from="0" to="1" begin="{delay:.3f}s" dur=".25s" fill="freeze"/>'
-                f'<animateTransform attributeName="transform" type="translate" from="0,-3" to="0,0" begin="{delay:.3f}s" dur=".25s" fill="freeze"/>'
-                f'</rect>'
-            )
-        delay += .012
+def rounded_rect(x, y, w, h, fill="#071423", stroke="#2f77ad", rx=8, opacity=1):
+    return (
+        f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{rx}" '
+        f'fill="{fill}" stroke="{stroke}" opacity="{opacity}"/>'
+    )
 
-    parts += [
-        '<text x="610" y="468" class="dow">Mon</text>',
-        '<text x="610" y="486" class="dow">Wed</text>',
-        '<text x="610" y="504" class="dow">Fri</text>',
+
+def pill(x, y, label, mark, color, width=None):
+    label_width = len(label) * 8
+    total = width or max(76, label_width + 44)
+    parts = [
+        rounded_rect(x, y - 20, total, 26, fill="#071a2b", stroke="#244b70", rx=6, opacity=0.96),
+        f'<rect x="{x + 7}" y="{y - 16}" width="18" height="18" rx="4" fill="{color}"/>',
+        text(x + 16, y - 2, mark, size=9, fill="#03101d", weight="800", anchor="middle"),
+        text(x + 33, y - 2, label, size=13, fill="#e8f3ff"),
     ]
+    return "\n".join(parts), total
+
+
+def badge_row(items, x, y, gap=10):
+    parts = []
+    cursor = x
+    for label, mark, color, width in items:
+        badge, actual_width = pill(cursor, y, label, mark, color, width)
+        parts.append(badge)
+        cursor += actual_width + gap
     return "\n".join(parts)
 
-def build_svg(data, portrait, dark):
-    bg = "#0d1117" if dark else "#ffffff"
-    panel = "#161b22" if dark else "#f6f8fa"
-    text = "#e6edf3" if dark else "#24292f"
-    muted = "#8b949e" if dark else "#57606a"
-    border = "#30363d" if dark else "#d0d7de"
-    accent = "#58a6ff" if dark else "#0969da"
-    green = "#3fb950" if dark else "#1a7f37"
-    amber = "#d29922" if dark else "#9a6700"
 
-    current, longest = streaks(data["weeks"])
+def info_row(y, tag, label, value, extra=None):
+    parts = [
+        rounded_rect(600, y - 21, 28, 28, fill="#092033", stroke="#265b87", rx=6),
+        text(614, y - 3, tag, size=10, fill="#58c7ff", weight="800", anchor="middle"),
+        text(640, y - 2, f"{label}:", size=17, fill="#46b3ff", weight="700"),
+        text(780, y - 2, value, size=17, fill="#f4f8ff"),
+    ]
+    if extra:
+        for idx, item in enumerate(extra):
+            parts.append(text(780, y + 27 + idx * 27, item, size=17, fill="#f4f8ff"))
+    return "\n".join(parts)
 
-    svg = [
-        '<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">',
-        f'<rect width="1200" height="760" rx="20" fill="{bg}"/>',
-        f'<rect x="14" y="14" width="1172" height="732" rx="16" fill="{bg}" stroke="{border}"/>',
 
-        f'<text x="42" y="50" font-family="monospace" font-size="18" fill="{green}">{esc(USERNAME)}@github:~$</text>',
-        f'<text x="1155" y="50" text-anchor="end" font-family="monospace" font-size="17" fill="{muted}">&lt; /software-engineer &gt;</text>',
-        f'<line x1="42" y1="70" x2="1158" y2="70" stroke="{border}"/>',
+def stat_card(x, y, value, label, mark, color):
+    return "\n".join(
+        [
+            rounded_rect(x, y, 146, 82, fill="#071827", stroke="#2b638f", rx=7),
+            rounded_rect(x + 18, y + 18, 22, 22, fill="#071827", stroke=color, rx=4),
+            text(x + 29, y + 34, mark, size=13, fill=color, weight="800", anchor="middle"),
+            text(x + 73, y + 49, f"{value:,}", size=22, fill="#e8f3ff", weight="800", anchor="middle"),
+            text(x + 73, y + 71, label, size=13, fill="#c5d8ef", anchor="middle"),
+        ]
+    )
 
-        # Left terminal portrait
-        f'<rect x="35" y="90" width="515" height="600" rx="12" fill="{panel}" stroke="{border}"/>',
-        f'<text x="55" y="120" font-family="monospace" font-size="14" fill="{muted}">keshmaSalgado@github:~$ cat profile.txt</text>',
+
+def build_svg(data, portrait_lines):
+    parts = [
+        '<svg xmlns="http://www.w3.org/2000/svg" width="1220" height="1280" viewBox="0 0 1220 1280">',
+        "<defs>",
+        '<pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse">',
+        '<circle cx="2" cy="2" r="1" fill="#174363" opacity="0.28"/>',
+        "</pattern>",
+        '<radialGradient id="glow" cx="50%" cy="35%" r="70%">',
+        '<stop offset="0%" stop-color="#10385a" stop-opacity="0.72"/>',
+        '<stop offset="60%" stop-color="#04111f" stop-opacity="0.92"/>',
+        '<stop offset="100%" stop-color="#010812" stop-opacity="1"/>',
+        "</radialGradient>",
+        "</defs>",
+        '<rect width="1220" height="1280" fill="#010812"/>',
+        '<rect width="1220" height="1280" fill="url(#glow)"/>',
+        '<rect width="1220" height="1280" fill="url(#dots)"/>',
+        rounded_rect(12, 10, 1196, 1260, fill="#03101d", stroke="#2e78ac", rx=8),
+        text(40, 50, f"{USERNAME}@github:~", size=21, fill="#37f57a", weight="800"),
+        '<rect x="313" y="32" width="11" height="24" fill="#dbeafe" opacity="0.95"/>',
+        text(1175, 47, "< Software Engineer />", size=17, fill="#c7dfff", anchor="end"),
     ]
 
-    y = 145
-    for line in portrait:
-        svg.append(
-            f'<text x="65" y="{y}" font-family="monospace" font-size="11" fill="{text}" xml:space="preserve">{esc(line)}</text>'
+    y = 96
+    for portrait_line in portrait_lines:
+        parts.append(
+            text(34, y, portrait_line, size=10.1, fill="#a7d7ff", opacity=0.95)
+            .replace("<text ", '<text xml:space="preserve" ')
         )
-        y += 11
+        y += 10.6
 
-    svg += [
-        f'<line x1="65" y1="600" x2="520" y2="600" stroke="{border}"/>',
-        f'<text x="65" y="628" font-family="monospace" font-size="13" fill="{accent}">"Build ideas. Learn always. Make an impact."</text>',
-        f'<text x="65" y="660" font-family="monospace" font-size="13" fill="{green}">keshmaSalgado@github:~$ _</text>',
+    parts.extend(
+        [
+            text(300, 884, '"Build ideas. Learn always.', size=18, fill="#b7d8ff", anchor="middle"),
+            text(300, 912, 'Make an impact."', size=18, fill="#b7d8ff", anchor="middle"),
+            line(279, 935, 321, 935, stroke="#58c7ff", width=2),
+            rounded_rect(35, 965, 532, 284, fill="#061323", stroke="#2f77ad", rx=7),
+            text(58, 1007, f"{USERNAME}@github:~$ cat about_me.txt", size=18, fill="#37f57a", weight="800"),
+            text(65, 1049, "> Passionate about technology", size=17, fill="#e8f3ff"),
+            text(65, 1082, "> Love building real-world projects", size=17, fill="#e8f3ff"),
+            text(65, 1115, "> Always learning something new", size=17, fill="#e8f3ff"),
+            text(65, 1148, "> Interested in AI, 3D, and creative tech", size=17, fill="#e8f3ff"),
+            text(65, 1181, "> Open to collaboration and opportunities", size=17, fill="#e8f3ff"),
+            text(58, 1219, f"{USERNAME}@github:~$ _", size=18, fill="#37f57a", weight="800"),
+            text(600, 101, data["name"], size=34, fill="#f4f8ff", weight="800"),
+            line(887, 65, 887, 106, stroke="#58c7ff", width=2.2),
+            text(600, 132, "Software Engineer & Problem Solver", size=21, fill="#46b3ff"),
+            line(600, 163, 1176, 163, stroke="#46b3ff", width=1.8, dash="6 5"),
+            info_row(200, "OS", "OS", "Windows 10"),
+            info_row(234, "PIN", "Location", "Colombo, Sri Lanka"),
+            info_row(
+                268,
+                "EDU",
+                "Education",
+                "BSc (Hons) Software Engineering",
+                ["Cardiff Metropolitan University", "(2025 - 2028)"],
+            ),
+            info_row(354, "GO", "Focus", "Full Stack Development | AI | Cloud"),
+            info_row(388, "RUN", "Currently", "Building projects, learning & improving"),
+            info_row(422, "FX", "Fun Fact", "Turning ideas into reality"),
+            line(600, 454, 1176, 454, stroke="#46b3ff", width=1.8, dash="6 5"),
+            text(600, 498, "Tech Stack", size=25, fill="#46b3ff", weight="800"),
+            text(600, 536, "Languages", size=16, fill="#46b3ff", weight="800"),
+            text(733, 536, ":", size=16, fill="#46b3ff", weight="800"),
+            badge_row(
+                [
+                    ("JavaScript", "JS", "#f7df1e", 112),
+                    ("TypeScript", "TS", "#3178c6", 120),
+                    ("Python", "PY", "#ffd43b", 96),
+                ],
+                764,
+                536,
+            ),
+            badge_row(
+                [
+                    ("Java", "JV", "#e76f00", 78),
+                    ("Go", "GO", "#00add8", 68),
+                    ("Dart", "DT", "#00b4ab", 78),
+                ],
+                764,
+                570,
+            ),
+            text(600, 614, "Frontend", size=16, fill="#46b3ff", weight="800"),
+            text(733, 614, ":", size=16, fill="#46b3ff", weight="800"),
+            badge_row(
+                [
+                    ("React", "RX", "#61dafb", 88),
+                    ("Next.js", "N", "#ffffff", 92),
+                    ("Flutter", "FL", "#54c5f8", 96),
+                ],
+                764,
+                614,
+            ),
+            badge_row(
+                [
+                    ("HTML5", "H5", "#e34f26", 86),
+                    ("CSS3", "C3", "#1572b6", 76),
+                    ("Tailwind CSS", "TW", "#38bdf8", 136),
+                    ("Three.js", "3D", "#ffffff", 98),
+                ],
+                764,
+                648,
+            ),
+            text(600, 692, "Backend", size=16, fill="#46b3ff", weight="800"),
+            text(733, 692, ":", size=16, fill="#46b3ff", weight="800"),
+            badge_row(
+                [
+                    ("Node.js", "ND", "#5fa04e", 96),
+                    ("Express.js", "EX", "#ffffff", 114),
+                    ("Django", "DJ", "#44b78b", 92),
+                    ("FastAPI", "FA", "#009688", 98),
+                ],
+                764,
+                692,
+            ),
+            text(600, 736, "Databases", size=16, fill="#46b3ff", weight="800"),
+            text(733, 736, ":", size=16, fill="#46b3ff", weight="800"),
+            badge_row(
+                [
+                    ("MongoDB", "MG", "#47a248", 102),
+                    ("MySQL", "MY", "#4479a1", 86),
+                    ("PostgreSQL", "PG", "#4169e1", 122),
+                    ("SQLite", "SQ", "#74b9d6", 88),
+                ],
+                764,
+                736,
+            ),
+            text(600, 780, "Cloud & Tools", size=16, fill="#46b3ff", weight="800"),
+            text(733, 780, ":", size=16, fill="#46b3ff", weight="800"),
+            badge_row(
+                [
+                    ("AWS", "AW", "#ff9900", 74),
+                    ("Vercel", "VC", "#ffffff", 90),
+                    ("Render", "RN", "#6d43ff", 90),
+                    ("Git", "GT", "#f05032", 72),
+                    ("GitHub", "GH", "#ffffff", 84),
+                ],
+                764,
+                780,
+            ),
+            text(600, 824, "Others", size=16, fill="#46b3ff", weight="800"),
+            text(733, 824, ":", size=16, fill="#46b3ff", weight="800"),
+            badge_row(
+                [
+                    ("VS Code", "VS", "#007acc", 96),
+                    ("Figma", "FG", "#a259ff", 86),
+                    ("Postman", "PM", "#ff6c37", 104),
+                    ("Docker", "DK", "#2496ed", 94),
+                ],
+                764,
+                824,
+            ),
+            badge_row(
+                [
+                    ("Linux", "LX", "#f4ca16", 86),
+                    ("Blender", "BL", "#f5792a", 100),
+                    ("React Three Fiber", "R3", "#61dafb", 172),
+                ],
+                764,
+                858,
+            ),
+            line(600, 905, 1176, 905, stroke="#46b3ff", width=1.8, dash="6 5"),
+            text(600, 934, "Contact Me", size=25, fill="#46b3ff", weight="800"),
+            info_row(970, "EM", "Email", EMAIL),
+            info_row(1004, "IN", "LinkedIn", LINKEDIN),
+            info_row(1038, "GH", "GitHub", f"github.com/{USERNAME}"),
+            info_row(1072, "DC", "Discord", DISCORD),
+            info_row(1106, "PF", "Portfolio", "Coming Soon..."),
+            line(600, 1128, 1176, 1128, stroke="#46b3ff", width=1.8, dash="6 5"),
+            text(600, 1160, "GitHub Stats", size=25, fill="#46b3ff", weight="800"),
+            stat_card(600, 1177, data["repos"], "Repositories", "R", "#37f57a"),
+            stat_card(754, 1177, data["commits"], "Commits", "C", "#58c7ff"),
+            stat_card(908, 1177, data["stars"], "Stars", "S", "#ffbd59"),
+            stat_card(1062, 1177, data["followers"], "Followers", "F", "#c084fc"),
+            text(894, 1263, '"Consistency turns ideas into results."', size=14, fill="#c7dfff", anchor="middle"),
+        ]
+    )
 
-        # Right profile
-        f'<text x="590" y="112" font-family="monospace" font-size="28" font-weight="bold" fill="{text}">{esc(data["name"])}</text>',
-        f'<text x="590" y="140" font-family="monospace" font-size="17" fill="{accent}">Software Engineer &amp; Problem Solver</text>',
-        f'<line x1="590" y1="160" x2="1158" y2="160" stroke="{accent}"/>',
+    parts.append("</svg>")
+    return "\n".join(parts)
 
-        f'<text x="590" y="188" font-family="monospace" font-size="13" fill="{accent}">OS</text>',
-        f'<text x="735" y="188" font-family="monospace" font-size="13" fill="{text}">Windows / Linux</text>',
-        f'<text x="590" y="214" font-family="monospace" font-size="13" fill="{accent}">Location</text>',
-        f'<text x="735" y="214" font-family="monospace" font-size="13" fill="{text}">Colombo, Sri Lanka</text>',
-        f'<text x="590" y="240" font-family="monospace" font-size="13" fill="{accent}">Education</text>',
-        f'<text x="735" y="240" font-family="monospace" font-size="13" fill="{text}">Software Engineering</text>',
-        f'<text x="590" y="266" font-family="monospace" font-size="13" fill="{accent}">Focus</text>',
-        f'<text x="735" y="266" font-family="monospace" font-size="13" fill="{text}">Full Stack | AI | Cloud</text>',
-        f'<text x="590" y="292" font-family="monospace" font-size="13" fill="{accent}">Currently</text>',
-        f'<text x="735" y="292" font-family="monospace" font-size="13" fill="{text}">Building projects &amp; learning</text>',
-
-        f'<line x1="590" y1="315" x2="1158" y2="315" stroke="{border}"/>',
-        f'<text x="590" y="345" font-family="monospace" font-size="20" font-weight="bold" fill="{accent}">Tech Stack</text>',
-        f'<text x="590" y="370" font-family="monospace" font-size="12" fill="{accent}">Languages</text>',
-        f'<text x="720" y="370" font-family="monospace" font-size="12" fill="{text}">JavaScript • TypeScript • Python • Java • Go • Dart</text>',
-        f'<text x="590" y="393" font-family="monospace" font-size="12" fill="{accent}">Frontend</text>',
-        f'<text x="720" y="393" font-family="monospace" font-size="12" fill="{text}">React • Next.js • Flutter • Tailwind • Three.js</text>',
-        f'<text x="590" y="416" font-family="monospace" font-size="12" fill="{accent}">Backend</text>',
-        f'<text x="720" y="416" font-family="monospace" font-size="12" fill="{text}">Node.js • Express • Django • FastAPI</text>',
-        f'<text x="590" y="439" font-family="monospace" font-size="12" fill="{accent}">Database</text>',
-        f'<text x="720" y="439" font-family="monospace" font-size="12" fill="{text}">MongoDB • MySQL • PostgreSQL • SQLite</text>',
-        f'<text x="590" y="462" font-family="monospace" font-size="12" fill="{accent}">Tools</text>',
-        f'<text x="720" y="462" font-family="monospace" font-size="12" fill="{text}">AWS • Git • GitHub • Docker • Figma • Blender</text>',
-
-        f'<line x1="590" y1="480" x2="1158" y2="480" stroke="{border}"/>',
-        f'<text x="590" y="510" font-family="monospace" font-size="20" font-weight="bold" fill="{accent}">GitHub Activity</text>',
-    ]
-
-    # Heatmap
-    svg.append(heatmap(data["weeks"], dark))
-    svg += [
-        f'<text x="590" y="540" font-family="monospace" font-size="11" fill="{muted}">{data["contributions"]:,} contributions in the last year</text>',
-        f'<text x="590" y="562" font-family="monospace" font-size="11" fill="{muted}">Current streak: {current} days  •  Longest streak: {longest} days</text>',
-
-        f'<rect x="590" y="580" width="130" height="72" rx="8" fill="{panel}" stroke="{border}"/>',
-        f'<rect x="735" y="580" width="130" height="72" rx="8" fill="{panel}" stroke="{border}"/>',
-        f'<rect x="880" y="580" width="130" height="72" rx="8" fill="{panel}" stroke="{border}"/>',
-        f'<rect x="1025" y="580" width="130" height="72" rx="8" fill="{panel}" stroke="{border}"/>',
-
-        f'<text x="655" y="612" text-anchor="middle" font-family="monospace" font-size="21" font-weight="bold" fill="{accent}">{data["repos"]}</text>',
-        f'<text x="800" y="612" text-anchor="middle" font-family="monospace" font-size="21" font-weight="bold" fill="{accent}">{data["stars"]}</text>',
-        f'<text x="945" y="612" text-anchor="middle" font-family="monospace" font-size="21" font-weight="bold" fill="{accent}">{data["followers"]}</text>',
-        f'<text x="1090" y="612" text-anchor="middle" font-family="monospace" font-size="21" font-weight="bold" fill="{amber}">{data["contributions"]}</text>',
-
-        f'<text x="655" y="636" text-anchor="middle" font-family="monospace" font-size="10" fill="{muted}">Repositories</text>',
-        f'<text x="800" y="636" text-anchor="middle" font-family="monospace" font-size="10" fill="{muted}">Stars</text>',
-        f'<text x="945" y="636" text-anchor="middle" font-family="monospace" font-size="10" fill="{muted}">Followers</text>',
-        f'<text x="1090" y="636" text-anchor="middle" font-family="monospace" font-size="10" fill="{muted}">Contributions</text>',
-
-        f'<text x="590" y="682" font-family="monospace" font-size="12" fill="{green}">keshmaSalgado@github:~$ ./contact.sh</text>',
-        f'<text x="590" y="704" font-family="monospace" font-size="11" fill="{muted}">GitHub: github.com/keshmaSalgado  •  LinkedIn: YOUR_LINK  •  Email: YOUR_EMAIL</text>',
-        '</svg>'
-    ]
-    return "\n".join(svg)
 
 def main():
     image = ASSETS / "profile.png"
@@ -316,14 +385,15 @@ def main():
 
     portrait = ascii_portrait(image)
     data = get_github_data()
+    svg = build_svg(data, portrait)
 
-    for mode in (True, False):
-        filename = ASSETS / ("profile_dark.svg" if mode else "profile_light.svg")
-        filename.write_text(build_svg(data, portrait, mode), encoding="utf-8")
+    for filename in ("profile_dark.svg", "profile_light.svg"):
+        (ASSETS / filename).write_text(svg, encoding="utf-8")
 
     print("Generated assets/profile_dark.svg and assets/profile_light.svg")
     if not TOKEN:
-        print("No ACCESS_TOKEN was set; using local demo data instead of live GitHub stats.")
+        print("No ACCESS_TOKEN was set; using profile preview data instead of live GitHub stats.")
+
 
 if __name__ == "__main__":
     main()
