@@ -3,7 +3,7 @@ from io import BytesIO
 import os
 from pathlib import Path
 
-from PIL import Image, ImageEnhance, ImageOps
+from PIL import Image
 
 ROOT = Path(__file__).parent
 ASSETS = ROOT / "assets"
@@ -28,29 +28,11 @@ def esc(value):
 
 def portrait_data_uri(path):
     image = Image.open(path).convert("RGB")
-    w, h = image.size
+    image.thumbnail((532, 790), Image.Resampling.LANCZOS)
 
-    # Use the real portrait as the main visual; the blue monochrome treatment
-    # keeps the terminal mood without making the face hard to read.
-    crop = (
-        int(w * 0.19),
-        int(h * 0.02),
-        int(w * 0.95),
-        int(h * 0.92),
-    )
-    image = image.crop(crop)
-    image = ImageOps.fit(image, (520, 760), method=Image.Resampling.LANCZOS, centering=(0.52, 0.44))
-
-    mono = ImageOps.grayscale(image)
-    mono = ImageOps.autocontrast(mono, cutoff=1)
-    mono = ImageEnhance.Contrast(mono).enhance(1.18)
-    mono = ImageEnhance.Sharpness(mono).enhance(1.2)
-
-    tinted = ImageOps.colorize(mono, black="#03101d", white="#b8dcff", mid="#3379ad")
-
-    overlay = Image.new("RGB", tinted.size, "#03101d")
-    tinted = Image.blend(overlay, tinted, 0.88)
-
+    tinted = Image.new("RGB", (532, 790), "#010812")
+    offset = ((532 - image.width) // 2, (790 - image.height) // 2)
+    tinted.paste(image, offset)
     buffer = BytesIO()
     tinted.save(buffer, format="PNG", optimize=True)
     encoded = base64.b64encode(buffer.getvalue()).decode("ascii")
@@ -378,9 +360,11 @@ def build_svg(data, portrait_uri):
 
 
 def main():
-    image = ASSETS / "profile.png"
+    image = ASSETS / "profile_ascii.png"
     if not image.exists():
-        raise FileNotFoundError("Put your image at assets/profile.png")
+        image = ASSETS / "profile.png"
+    if not image.exists():
+        raise FileNotFoundError("Put your image at assets/profile_ascii.png or assets/profile.png")
 
     portrait = portrait_data_uri(image)
     data = get_github_data()
