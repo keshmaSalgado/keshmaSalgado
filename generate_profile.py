@@ -1,3 +1,5 @@
+import base64
+from io import BytesIO
 import os
 from pathlib import Path
 
@@ -15,9 +17,6 @@ LINKEDIN = os.getenv("PROFILE_LINKEDIN", "linkedin.com/in/keshmasalgado")
 DISCORD = os.getenv("PROFILE_DISCORD", "keshmaSalgado")
 
 FONT = "JetBrains Mono, Consolas, Liberation Mono, monospace"
-ASCII_CHARS = " .,:;irsXA253hMHGS#9B&@"
-
-
 def esc(value):
     return (
         str(value)
@@ -27,35 +26,35 @@ def esc(value):
         .replace('"', "&quot;")
     )
 
-
-def ascii_portrait(path, width=76):
-    image = Image.open(path).convert("L")
+def portrait_data_uri(path):
+    image = Image.open(path).convert("RGB")
     w, h = image.size
 
-    # Crop around the face and upper body so the ASCII portrait reads clearly.
+    # Use the real portrait as the main visual; the blue monochrome treatment
+    # keeps the terminal mood without making the face hard to read.
     crop = (
-        int(w * 0.16),
-        int(h * 0.01),
-        int(w * 0.98),
-        int(h * 0.90),
+        int(w * 0.19),
+        int(h * 0.02),
+        int(w * 0.95),
+        int(h * 0.92),
     )
     image = image.crop(crop)
-    image = ImageOps.autocontrast(image)
-    image = ImageEnhance.Contrast(image).enhance(1.45)
-    image = ImageEnhance.Sharpness(image).enhance(1.25)
+    image = ImageOps.fit(image, (520, 760), method=Image.Resampling.LANCZOS, centering=(0.52, 0.44))
 
-    height = max(1, int(image.height / image.width * width * 0.66))
-    image = image.resize((width, height), Image.Resampling.LANCZOS)
+    mono = ImageOps.grayscale(image)
+    mono = ImageOps.autocontrast(mono, cutoff=1)
+    mono = ImageEnhance.Contrast(mono).enhance(1.18)
+    mono = ImageEnhance.Sharpness(mono).enhance(1.2)
 
-    lines = []
-    for y in range(image.height):
-        row = []
-        for x in range(image.width):
-            pixel = image.getpixel((x, y))
-            index = (255 - pixel) * (len(ASCII_CHARS) - 1) // 255
-            row.append(ASCII_CHARS[index])
-        lines.append("".join(row).rstrip())
-    return lines
+    tinted = ImageOps.colorize(mono, black="#03101d", white="#b8dcff", mid="#3379ad")
+
+    overlay = Image.new("RGB", tinted.size, "#03101d")
+    tinted = Image.blend(overlay, tinted, 0.88)
+
+    buffer = BytesIO()
+    tinted.save(buffer, format="PNG", optimize=True)
+    encoded = base64.b64encode(buffer.getvalue()).decode("ascii")
+    return f"data:image/png;base64,{encoded}"
 
 
 def github(query, variables):
@@ -197,7 +196,7 @@ def stat_card(x, y, value, label, mark, color):
     )
 
 
-def build_svg(data, portrait_lines):
+def build_svg(data, portrait_uri):
     parts = [
         '<svg xmlns="http://www.w3.org/2000/svg" width="1220" height="1280" viewBox="0 0 1220 1280">',
         "<defs>",
@@ -217,15 +216,15 @@ def build_svg(data, portrait_lines):
         text(40, 50, f"{USERNAME}@github:~", size=21, fill="#37f57a", weight="800"),
         '<rect x="313" y="32" width="11" height="24" fill="#dbeafe" opacity="0.95"/>',
         text(1175, 47, "< Software Engineer />", size=17, fill="#c7dfff", anchor="end"),
+        "<clipPath id=\"portraitClip\">",
+        '<rect x="35" y="78" width="532" height="790" rx="8"/>',
+        "</clipPath>",
+        '<image href="' + portrait_uri + '" x="35" y="78" width="532" height="790" preserveAspectRatio="xMidYMid slice" clip-path="url(#portraitClip)" opacity="0.92"/>',
+        '<rect x="35" y="78" width="532" height="790" rx="8" fill="url(#dots)" opacity="0.45"/>',
+        '<rect x="35" y="78" width="532" height="790" rx="8" fill="none" stroke="#2f77ad" opacity="0.65"/>',
+        '<rect x="35" y="78" width="532" height="790" rx="8" fill="#010812" opacity="0.10"/>',
+        line(60, 828, 542, 828, stroke="#58c7ff", width=1, dash="5 7", opacity=0.7),
     ]
-
-    y = 96
-    for portrait_line in portrait_lines:
-        parts.append(
-            text(34, y, portrait_line, size=10.1, fill="#a7d7ff", opacity=0.95)
-            .replace("<text ", '<text xml:space="preserve" ')
-        )
-        y += 10.6
 
     parts.extend(
         [
@@ -383,7 +382,7 @@ def main():
     if not image.exists():
         raise FileNotFoundError("Put your image at assets/profile.png")
 
-    portrait = ascii_portrait(image)
+    portrait = portrait_data_uri(image)
     data = get_github_data()
     svg = build_svg(data, portrait)
 
